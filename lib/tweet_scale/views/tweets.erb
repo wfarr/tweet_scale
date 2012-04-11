@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Tweet Scale</title>
+  </head>
+
+  <body>
+    <h1><a href="/">Tweet Scale</a></h1>
+    <% @tweets.each do |tweet| %>
+      <dl>
+        <dt>User</dt>
+        <dd><%= tweet['user']['screen_name'] %></dd>
+        <dt>Followers</dt>
+        <dd><%= tweet['user']['followers_count'] %></dd>
+        <dt>Tweet Test</dt>
+        <dd><%= tweet['text'] %></dd>
+        <dt>Retweeted?</dt>
+        <dd><%= tweet['retweeted'] %></dd>
+      </dl>
+    <% end %>
+
+  </body>
+</html>
+
